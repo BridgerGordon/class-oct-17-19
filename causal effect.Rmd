@@ -1,0 +1,24 @@
+---
+title: "Causal Effect"
+author: "Bridger Gordon"
+date: "10/17/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(fs)
+library(googlesheets4)
+```
+
+## Title
+
+
+```{r}
+download.file("https://docs.google.com/spreadsheets/d/e/2PACX-1vSaerGnn1tDQfgiyJRl7jnn1Au7Ev6Qt7BwMpl53ZgzAyMnANQfog9y4es4ZExlX5tjEgl0mPIyTGcP/pub?gid=480043959&single=true&output=csv", destfile = "trains.data.csv")
+
+trains <- read.csv("trains.data.csv")
+trains
+
+```
